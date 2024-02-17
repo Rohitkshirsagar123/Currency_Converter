@@ -1,16 +1,14 @@
 {
-  "homepage": "https://rohitkshirsagar123.github.io/Currency_Converter",
   "name": "currencyconverter",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "deploy": "vite build && vite build --base=./ --outDir=./dist && vite-plugin-gh-pages",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -28,6 +26,7 @@
     "gh-pages": "^6.1.1",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-gh-pages": "^0.4.1"
   }
 }
